@@ -24,13 +24,14 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            flex-wrap: wrap; /* Adicionado para melhorar a responsividade */
         }
 
         nav a {
             text-decoration: none;
             color: #fff;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 10px 15px; /* Reduzido o padding para melhorar a responsividade */
+            margin: 0 5px;
             border-radius: 5px;
             transition: background-color 0.3s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -62,17 +63,16 @@
 
         .faixa-preta {
             background-color: #000;
-            height: 30px;
+            height: 15px; /* Reduzido a altura para melhorar a responsividade */
             margin-top: 20px;
         }
 
         #frameworkImages {
             display: flex;
-            justify-content: space-around;
-            margin: 20px;
+            justify-content: center;
             flex-wrap: wrap;
-            list-style-type: none; /* Remove os marcadores de lista padrão */
-            padding: 0; /* Remova o preenchimento padrão da lista */
+            list-style-type: none;
+            padding: 0;
         }
 
         #frameworkImages li {
@@ -81,8 +81,8 @@
         }
 
         #frameworkImages img {
-            width: 100px;
-            height: 100px;
+            width: 80px; /* Reduzido o tamanho das imagens para melhorar a responsividade */
+            height: 80px;
             border-radius: 5px;
         }
 
@@ -99,6 +99,23 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Adicione estilos específicos para telas menores aqui */
+            nav a {
+                padding: 8px; /* Ajuste o padding para telas menores */
+                font-size: 12px; /* Ajuste o tamanho da fonte para telas menores */
+            }
+
+            #frameworkImages img {
+                width: 50px; /* Ajuste o tamanho das imagens para telas menores */
+                height: 50px;
+            }
+
+            li img {
+                margin-left: 0; /* Remova o margin-left para centralizar a imagem */
+            }
         }
     </style>
 </head>
@@ -117,7 +134,7 @@
     </nav>
 
     <div class="faixa-preta"></div>
-    <li><img src="resources/java.png" style="margin-left: 450px;" alt="Java"></li>
+    <li><img src="resources/java.png" style="margin-left: auto; margin-right: auto; display: block;" alt="Java"></li>
     <div class="faixa-preta"></div>
 
     <ul id="frameworkImages">
@@ -132,11 +149,12 @@
         <li><img src="resources/java-ee.png" alt="Java-ee"></li>
         <li><img src="resources/eclipse.png" alt="Eclipse"></li>
         <li><img src="resources/bootstrap.png" alt="Bootstrap"></li>
-        
     </ul>
- <div class="faixa-preta"></div>
+
+    <div class="faixa-preta"></div>
+
     <script>
-       
+        // Se necessário, adicione scripts aqui
     </script>
 </body>
 
