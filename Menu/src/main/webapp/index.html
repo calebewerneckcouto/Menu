@@ -1,169 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Profissional - JAVA</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Desenvolvedor Java</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Cor de fundo dark */
+    color: #fff; /* Cor do texto */
+}
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap; /* Adicionado para melhorar a responsividade */
-        }
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 15px; /* Reduzido o padding para melhorar a responsividade */
-            margin: 0 5px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+h1, h2, h3 {
+    margin-top: 0;
+}
 
-        nav a:hover {
-            background-color: #eee;
-        }
+.project {
+    margin-bottom: 20px;
+    border: 1px solid #555; /* Cor da borda dos projetos */
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Cor de fundo dos projetos */
+}
 
-        .menu-link-1 {
-            background-color: #3498db;
-        }
+.technologies {
+    list-style: none;
+    padding: 0;
+}
 
-        .menu-link-2 {
-            background-color: rgb(255, 128, 192);
-        }
+.technologies li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
-        .menu-link-3 {
-            background-color: #e74c3c;
-        }
+.profile-img {
+    display: block;
+    margin: 0 auto 20px; /* Espaçamento entre a foto e o conteúdo abaixo */
+    width: 150px; /* Tamanho da foto */
+    height: 150px; /* Tamanho da foto */
+    border-radius: 50%; /* Transforma a foto em um círculo */
+    border: 4px solid #fff; /* Borda branca ao redor da foto */
+}
 
-        .menu-link-4 {
-            background-color: #f39c12;
-        }
+.tabs {
+    margin-bottom: 20px;
+}
 
-        .menu-link-5 {
-            background-color: #9b59b6;
-        }
-        
-        .menu-link-6 {
-             background-color: #2ecc71;
-        }
-        
-         
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        .faixa-preta {
-            background-color: #000;
-            height: 15px; /* Reduzido a altura para melhorar a responsividade */
-            margin-top: 20px;
-        }
+.tab:hover {
+    background-color: #555;
+}
 
-        #frameworkImages {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            list-style-type: none;
-            padding: 0;
-        }
+.tab.active {
+    background-color: #007bff;
+}
 
-        #frameworkImages li {
-            text-align: center;
-            margin: 10px;
-        }
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
 
-        #frameworkImages img {
-            width: 80px; /* Reduzido o tamanho das imagens para melhorar a responsividade */
-            height: 80px;
-            border-radius: 5px;
-        }
+.tab-content.active {
+    display: block;
+}
 
-        #passwordInput {
-            margin-top: 10px;
-            padding: 5px;
-        }
+.project-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
 
-        #unlockButton {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        @media only screen and (max-width: 600px) {
-            /* Adicione estilos específicos para telas menores aqui */
-            nav a {
-                padding: 8px; /* Ajuste o padding para telas menores */
-                font-size: 12px; /* Ajuste o tamanho da fonte para telas menores */
-            }
-
-            #frameworkImages img {
-                width: 50px; /* Ajuste o tamanho das imagens para telas menores */
-                height: 50px;
-            }
-
-            li img {
-                margin-left: 0; /* Remova o margin-left para centralizar a imagem */
-            }
-        }
-    </style>
+.project-link:hover {
+    text-decoration: underline;
+}
+</style>
 </head>
-
 <body>
     <header>
-        <h1>Sistemas JAVA</h1>
+        <h1>Portfólio - Desenvolvedor Java</h1>
     </header>
+    <div class="container">
+        <img class="profile-img" src="resources/59000781.jpg" alt="Sua Foto de Perfil">
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Olá, meu nome é Calebe Wernneck Couto e sou um desenvolvedor Java apaixonado por criar soluções inovadoras.</p>
+        </section>
+        <section id="projects">
+            <h2>Projetos</h2>
+            <div class="tabs">
+                <div class="tab active" onclick="openTab('project1')">CWC3D</div>
+                <div class="tab" onclick="openTab('project2')">Gerenciamento de Custos Pessoais</div>
+                <div class="tab" onclick="openTab('project3')">Biblioteca Java</div>
+                <div class="tab" onclick="openTab('project4')">Jujubook</div>
+                <div class="tab" onclick="openTab('project5')">Sistema de Gerenciamento Construção Civil</div>
+                <div class="tab" onclick="openTab('project6')">Crud AWS</div>
+                <div class="tab" onclick="openTab('project7')">Envio Email Java</div>
+            </div>
+            <div id="project1" class="project tab-content active">
+                <h3>CWC3D</h3>
+                <p>Sistema desenvolvido para auxiliar na precificação de objetos impressos utilizando a tecnologia de impressão 3D. Possui vídeos tutoriais de modelagem utilizando os principais softwares do mercado. Utilizado Servlets com JSP e JDBC.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>Postgres</li>
+                    <li>JDBC</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>JSP</li>
+                </ul>
+                <a class="project-link" href="http://cwc3d.net/cwc3d">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/JAVAWEB.git">GitHub</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+            <div id="project2" class="project tab-content">
+                <h3>Gerenciamento de Custos Pessoais</h3>
+                <p>Sistema desenvolvido para Gerenciar gastos pessoais. Dados em Gráficos e filtro inteligente.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>Spring MVC</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>Primefaces</li>
+                    <li>JSF</li>
+                    <li>ManagedBean</li>
+                </ul>
+                <a class="project-link" href="https://www.cwc3d.net/custos/">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/JsfHibernateMaven/tree/master/posjavahibernate">GitHub</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+            <div id="project3" class="project tab-content">
+                <h3>Biblioteca Java</h3>
+                <p>Sistema criado com intuito de salvar códigos e métodos pessoais.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>Primefaces</li>
+                    <li>JSF</li>
+                    <li>ManagedBean</li>
+                    <li>Ajax</li>
+                    <li>WebServices</li>
+                </ul>
+                <a class="project-link" href="https://www.cwc3d.net/java">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/cwc3d/tree/main/eclipse-workspace/meuprimeiroprojetojsf">GitHub</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+            <div id="project4" class="project tab-content">
+                <h3>JUJUBOOK</h3>
+                <p>Sistema desenvolvido para minha filha escrever resumos dos livros e colocar valores de referência.</p>
+                <ul class="technologies">
+                     <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>API REST</li>
+                    <li> JavaScript, HTML e CSS</li>
+                </ul>
+                <a class="project-link" href="https://www.cwc3d.net/jujubook/">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/JUJUBOOK.git">GitHub</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+            <div id="project5" class="project tab-content">
+                <h3>Sistema de Gerenciamento Construção Civil</h3>
+                <p>Sistema para Gerenciamento Financeiro e Funcionários.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>Primefaces</li>
+                    <li>JSF</li>
+                    <li>ManagedBean</li>
+                    <li>WebServices</li>
+                    <li>Java EE e CDI</li>
+                    <li>API REST</li>
+                    <li>Ajax, JSON, JavaScript, HTML e CSS</li>
+                </ul>
+                <a class="project-link" href="https://www.cwc3d.net/caixa/publico/login.jsf">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/SPRINGCAIXAAQUI.git">GitHub</a>
+            </div>
 
-    <nav id="menu">
-        <a href="https://www.cwc3d.net" target="_blank" class="menu-link menu-link-1">Impressão 3D</a>
-        <a href="https://www.cwc3d.net/custos" target="_blank" class="menu-link menu-link-2">Custos 3D</a>
-        <a href="https://www.cwc3d.net/java" target="_blank" class="menu-link menu-link-3">Biblioteca Java</a>
-        <a href="https://www.cwc3d.net/jujubook" target="_blank" class="menu-link menu-link-4">JUJUBOOK</a>
-        <a href="https://www.cwc3d.net/caixa" target="_blank" class="menu-link menu-link-5">Caixa</a>
-        <a href="http://aws-produto-java.s3-website-us-east-1.amazonaws.com" target="_blank"  class="menu-link menu-link-6" >Produto AWS</a>
-    </nav>
+            <div id="project6" class="project tab-content">
+                <h3>CRUD AWS</h3>
+                <p>CRUD simples com as principais rotinas, hospedado na AWS Cloud.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>API REST</li>
+                      <li>AWS Cloud</li>
+                    <li> JavaScript, HTML e CSS</li>
+                </ul>
+                <a class="project-link" href="http://aws-produto-java.s3-website-us-east-1.amazonaws.com/">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/AWS.git">GitHub</a>
+            </div>
 
-    <div class="faixa-preta"></div>
-    <li><img src="resources/java.png" style="margin-left: auto; margin-right: auto; display: block;" alt="Java"></li>
-    <div class="faixa-preta"></div>
 
-    <ul id="frameworkImages">
-        <!-- Inclua várias imagens aqui -->
-        <li><img src="resources/hibernate.jpg" alt="Hibernate"></li>
-        <li><img src="resources/postgres.png" alt="Postgres"></li>
-        <li><img src="resources/html.jpg" alt="Html"></li>
-        <li><img src="resources/jquery.png" alt="Jquery"></li>
-        <li><img src="resources/ajax.jpg" alt="Ajax"></li>
-        <li><img src="resources/sql.png" alt="SQL"></li>
-        <li><img src="resources/spring.png" alt="Spring"></li>
-        <li><img src="resources/java-ee.png" alt="Java-ee"></li>
-        <li><img src="resources/eclipse.png" alt="Eclipse"></li>
-        <li><img src="resources/bootstrap.png" alt="Bootstrap"></li>
-         <li><img src="resources/aws.jpg" alt="AWS"></li>
-    </ul>
+            <div id="project7" class="project tab-content">
+                <h3>Envio Email Java</h3>
+                <p>Aplicação para envio de e-mail.</p>
+                <ul class="technologies">
+                    <!-- Adicione as tecnologias do Projeto 5 -->
+                </ul>
 
-    <div class="faixa-preta"></div>
-
+                <a class="project-link" href="https://github.com/calebewerneckcouto/EmailJava.git">GitHub</a>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Desenvolvimento de Aplicações Java</li>
+                <li>Desenvolvimento Web com Spring Framework</li>
+                <li>Banco de Dados Relacionais (MySQL, PostgreSQL)</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Versionamento de Código com Git</li>
+                <li>Testes Automatizados</li>
+            </ul>
+        </section>
+        
+        <section id="certificates" class="certificates">
+        <h2>Certificados</h2>
+        <div class="certificate">
+            <h3>Curso de Java Avançado Web Full Stack</h3>
+            <p>Concluído em dezembro de 2023.</p>
+            <a class="certificate-link" href="resources/certificadojava.pdf">Ver Certificado</a>
+        </div>
+        <!-- Adicione mais certificados conforme necessário -->
+    </section>
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Você pode me contatar em calebewerneck@hotmail.com ou através das redes sociais:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/calebe-werneck-571091295/">LinkedIn</a></li>
+                <li><a href="https://github.com/calebewerneckcouto">GitHub</a></li>
+            </ul>
+        </section>
+    </div>
     <script>
-        // Se necessário, adicione scripts aqui
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+            var tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.querySelector('[onclick="openTab(\'' + tabName + '\')"]').classList.add("active");
+        }
     </script>
 </body>
-
 </html>
