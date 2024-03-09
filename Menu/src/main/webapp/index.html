@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio - Desenvolvedor Java</title>
+<title>Desenvolvedor Java</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -122,10 +122,12 @@ h1, h2, h3 {
                 <div class="tab active" onclick="openTab('project1')">CWC3D</div>
                 <div class="tab" onclick="openTab('project2')">Gerenciamento de Custos Pessoais</div>
                 <div class="tab" onclick="openTab('project3')">Biblioteca Java</div>
-                <div class="tab" onclick="openTab('project4')">Jujubook</div>
+                <div class="tab" onclick="openTab('project4')">SpringBoot</div>
                 <div class="tab" onclick="openTab('project5')">Sistema de Gerenciamento Construção Civil</div>
                 <div class="tab" onclick="openTab('project6')">Crud AWS</div>
                 <div class="tab" onclick="openTab('project7')">Envio Email Java</div>
+                <div class="tab" onclick="openTab('project8')">Jujubook</div>
+                <div class="tab" onclick="openTab('project9')">Angular</div>
             </div>
             <div id="project1" class="project tab-content active">
                 <h3>CWC3D</h3>
@@ -139,7 +141,8 @@ h1, h2, h3 {
                     <li>JavaScript</li>
                     <li>JSP</li>
                 </ul>
-                <a class="project-link" href="http://cwc3d.net/cwc3d">Veja o Projeto</a>
+               <a class="project-link" href="http://cwc3d.net/cwc3d" onclick="projeto();">Veja o Projeto</a>
+
                 <a class="project-link" href="https://github.com/calebewerneckcouto/JAVAWEB.git">GitHub</a>
             </div>
             <!-- Adicione mais projetos conforme necessário -->
@@ -155,7 +158,7 @@ h1, h2, h3 {
                     <li>JSF</li>
                     <li>ManagedBean</li>
                 </ul>
-                <a class="project-link" href="https://www.cwc3d.net/custos/">Veja o Projeto</a>
+                <a class="project-link" href="https://www.cwc3d.net/custos/"  onclick="projeto();">Veja o Projeto</a>
                 <a class="project-link" href="https://github.com/calebewerneckcouto/JsfHibernateMaven/tree/master/posjavahibernate">GitHub</a>
             </div>
             <!-- Adicione mais projetos conforme necessário -->
@@ -173,23 +176,24 @@ h1, h2, h3 {
                     <li>Ajax</li>
                     <li>WebServices</li>
                 </ul>
-                <a class="project-link" href="https://www.cwc3d.net/java">Veja o Projeto</a>
+                <a class="project-link" href="https://www.cwc3d.net/java" onclick="projeto()">Veja o Projeto</a>
                 <a class="project-link" href="https://github.com/calebewerneckcouto/cwc3d/tree/main/eclipse-workspace/meuprimeiroprojetojsf">GitHub</a>
             </div>
             <!-- Adicione mais projetos conforme necessário -->
             <div id="project4" class="project tab-content">
-                <h3>JUJUBOOK</h3>
-                <p>Sistema desenvolvido para minha filha escrever resumos dos livros e colocar valores de referência.</p>
+                <h3>SpringBoot</h3>
+                <p>Sistema desenvolvido em SpringBoot..</p>
                 <ul class="technologies">
                      <li>Java</li>
                     <li>SpringBoot</li>
                     <li>Hibernate</li>
                     <li>PostgreSQL</li>
-                    <li>API REST</li>
+                    <li>API RESTfull</li>
                     <li> JavaScript, HTML e CSS</li>
                 </ul>
-                <a class="project-link" href="https://www.cwc3d.net/jujubook/">Veja o Projeto</a>
-                <a class="project-link" href="https://github.com/calebewerneckcouto/JUJUBOOK.git">GitHub</a>
+                <a class="project-link" href="http://cwc3d.net/spring/"  onclick="projeto();">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/SPRINGMVC.git">GitHub Spring</a>
+                
             </div>
             <!-- Adicione mais projetos conforme necessário -->
             <div id="project5" class="project tab-content">
@@ -208,7 +212,7 @@ h1, h2, h3 {
                     <li>API REST</li>
                     <li>Ajax, JSON, JavaScript, HTML e CSS</li>
                 </ul>
-                <a class="project-link" href="https://www.cwc3d.net/caixa/publico/login.jsf">Veja o Projeto</a>
+                <a class="project-link" href="https://www.cwc3d.net/caixa/publico/login.jsf" onclick="projetocaixa();">Veja o Projeto</a>
                 <a class="project-link" href="https://github.com/calebewerneckcouto/SPRINGCAIXAAQUI.git">GitHub</a>
             </div>
 
@@ -238,7 +242,48 @@ h1, h2, h3 {
 
                 <a class="project-link" href="https://github.com/calebewerneckcouto/EmailJava.git">GitHub</a>
             </div>
-            <!-- Adicione mais projetos conforme necessário -->
+            <div id="project8" class="project tab-content">
+                <h3>JUJUBOOK</h3>
+                <p>Sistema feito em SpringBoot.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                     </ul>
+                    <a class="project-link" href="http://cwc3d.net/jujubook" onclick="projeto();">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/JUJUBOOK.git">GitHub</a>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Desenvolvimento de Aplicações Java</li>
+                <li>Desenvolvimento Web com Spring Framework</li>
+                <li>Banco de Dados Relacionais (MySQL, PostgreSQL)</li>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Versionamento de Código com Git</li>
+                <li>Testes Automatizados</li>
+            </ul>
+        </section>
+        
+        
+         <div id="project9" class="project tab-content">
+                <h3>Angular</h3>
+                <p>Backend em Spring e Front utilizando Angular 8.</p>
+                <ul class="technologies">
+                    <li>Java</li>
+                    <li>SpringBoot</li>
+                    <li>Hibernate</li>
+                    <li>PostgreSQL</li>
+                    <li>Angular</li>
+                    <li>API RESTfull</li>
+                     
+                     </ul>
+                    <a class="project-link" href="http://cwc3d.net/angular/" onclick="projetoangular();">Veja o Projeto</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/angular.git">GitHub Front end</a>
+                <a class="project-link" href="https://github.com/calebewerneckcouto/cursospringrestapi.git">GitHub Back end</a>
+            </div>
         </section>
         <section id="skills">
             <h2>Habilidades</h2>
@@ -284,6 +329,43 @@ h1, h2, h3 {
             }
             document.querySelector('[onclick="openTab(\'' + tabName + '\')"]').classList.add("active");
         }
+        
+        
+        
+        function projeto() {
+        	
+        	
+            if (!confirm("Login: admin e Senha: admin")) {
+            	
+                e.preventDefault();
+            }
+        }
+        
+        
+  function projetocaixa() {
+        	
+        	
+            if (!confirm("Login: admin e Senha: admin123")) {
+            	
+                e.preventDefault();
+            }
+        }
+        
+        
+ function projetoangular() {
+        	
+	 alert('Utilize o recuperar acesso apos colocar seu email, sera enviado senha para ele. Ao Clicar em recuperar Acesso, ira Buscar o login no banco, a senha nova sera o dia atual 2024-02-18 (EXEMPLO)')
+            if (!confirm("Login: calebewerneck@gmail.com e Senha: admin")) {
+            	
+                e.preventDefault();
+            }
+        }
+        
+        
+        
+        
     </script>
+
+   
 </body>
 </html>
